@@ -32,6 +32,8 @@ Można wzorować się na https://excalidraw.com/
 
 * reactjs
 
+* storybook
+
 * mobx
 
 * testy automatyczne
@@ -41,5 +43,17 @@ Można wzorować się na https://excalidraw.com/
 * webpack
 
 * yarn
+
+# Co będzie brane pod uwagę:
+
+- Przede wszystkim proces powstawania projektu
+- Funkcjonalność
+- Wykorzystanie nowych standardów javascript
+- Wykorzystanie Typescripta
+- Wykorzystanie Reacta - podział na komponenty, wykorzystanie state, state management
+- Szybkość działania aplikacji
+- Testy - kilka testów jednostkowych, sprawdzających poprawność komponentów oraz logiki aplikacji frontowej
+- Czytelne README.md wyjaśniające co robi projekt i jak go uruchomić - po angielsku
+- Commity oraz cały kod po angielsku
 
 
