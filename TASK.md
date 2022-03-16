@@ -26,7 +26,7 @@ Można wzorować się na https://excalidraw.com/
 
 # Wymagania
 
-* podział na zadania (github issues) i tworzenie pull requestów do tych zadań; przypisywanie ich do @czubik oraz @kosek
+* podział na zadania (github issues) i tworzenie pull requestów do tych zadań; przypisywanie ich do @czubik oraz @kkosek
 
 * reactjs
 
