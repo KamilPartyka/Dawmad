@@ -28,6 +28,8 @@ Można wzorować się na https://excalidraw.com/
 
 * podział na zadania (github issues) i tworzenie pull requestów do tych zadań; przypisywanie ich do @czubik oraz @kkosek
 
+* pierwszy pull request powinien zawierać tylko szkielet projektu, bez żadnych ficzerów (np. bootstrap z create react app)
+
 * reactjs
 
 * mobx
