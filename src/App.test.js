@@ -1,9 +1,10 @@
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
+import { Title } from 'App';
 
-import App from './App';
+describe('Heading Component', () => {
+  test('Renders children text', () => {
+    const { getByText } = render(<Title>Hello</Title>);
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+    getByText('Hello');
+  });
 });

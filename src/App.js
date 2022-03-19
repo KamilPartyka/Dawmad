@@ -1,23 +1,21 @@
-import { useRef } from 'react';
-import styled from 'styled-components/macro';
+import { useState } from 'react';
+
 import MainTemplate from 'templates/MainTemplate';
-import Canvas from 'components/Canvas/Canvas';
+
+import Konva from 'components/Konva/Konva';
 import AddPhoto from 'components/AddPhoto/AddPhoto';
 
-const Title = styled.h1`
-  font-family: 'Montserrat';
-  font-size: 2rem;
-`;
+import { Title } from 'components/Title/Title';
 
 function App() {
-  const canvas = useRef(null);
+  const [items, setItems] = useState([]);
 
   return (
     <MainTemplate>
       <>
         <Title>Hello world</Title>
-        <AddPhoto canvas={canvas} />
-        <Canvas canvas={canvas} />
+        <AddPhoto setItems={setItems} />
+        <Konva items={items} setItems={setItems} />
       </>
     </MainTemplate>
   );
