@@ -3,9 +3,7 @@ import { useState } from 'react';
 import MainTemplate from 'templates/MainTemplate';
 
 import Konva from 'components/Konva/Konva';
-import AddPhoto from 'components/AddPhoto/AddPhoto';
-
-import { Title } from 'components/Title/Title';
+import Navbar from 'components/Navbar/Navbar';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -13,8 +11,7 @@ function App() {
   return (
     <MainTemplate>
       <>
-        <Title>Hello world</Title>
-        <AddPhoto setItems={setItems} />
+        <Navbar setItems={setItems} />
         <Konva items={items} setItems={setItems} />
       </>
     </MainTemplate>

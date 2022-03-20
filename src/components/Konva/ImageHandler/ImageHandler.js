@@ -1,14 +1,13 @@
-import React from 'react';
-
+import { useRef, useEffect } from 'react';
 import { Transformer, Image } from 'react-konva';
 import useImage from 'use-image';
 import PropTypes from 'prop-types';
 
 function ImageHandler({ src, shapeProps, isSelected, onSelect, onChange }) {
-  const shapeRef = React.useRef();
-  const trRef = React.useRef();
+  const shapeRef = useRef();
+  const trRef = useRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isSelected) {
       trRef.current.nodes([shapeRef.current]);
       trRef.current.getLayer().batchDraw();

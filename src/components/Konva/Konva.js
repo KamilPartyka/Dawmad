@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
 import { Stage, Layer } from 'react-konva';
 import PropTypes from 'prop-types';
-
 import ImageHandler from 'components/Konva/ImageHandler/ImageHandler';
 
 function Konva({ items, setItems }) {

@@ -3,9 +3,9 @@ export const theme = {
   white: '#fff',
   black: '#000',
 
-  primary: '#3BB2E2',
-  secondary: '#8AE3D7',
-  tertiary: '#4184A4',
+  primary: '#393E46',
+  secondary: '#00ADB5',
+  tertiary: '#EEEEEE',
 
   // fonts
   bold: '600',

@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
-
+import { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { StyledInput, StyledInputLabel } from './styles';
+import Input from 'components/Input/Input';
 
 function AddPhoto({ setItems }) {
   const inputField = useRef(null);
@@ -28,16 +27,12 @@ function AddPhoto({ setItems }) {
   };
 
   return (
-    <>
-      <StyledInput
-        ref={inputField}
-        type="file"
-        accept="image/png, image/jpeg"
-        onChange={inputToURL}
-        id="file"
-      />
-      <StyledInputLabel htmlFor="file">Select file</StyledInputLabel>
-    </>
+    <Input
+      inputRef={inputField}
+      onChange={inputToURL}
+      id="file"
+      color="tertiary"
+    />
   );
 }
 
