@@ -1,11 +1,10 @@
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import Input from 'components/Input/Input';
+import { idGenerator } from 'utils';
 
 function AddPhoto({ setItems }) {
   const inputField = useRef(null);
-
-  const idGenerator = () => `_${Math.random().toString(36).substr(2, 9)}`;
 
   const inputToURL = () => {
     const filed = inputField.current;
