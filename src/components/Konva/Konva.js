@@ -27,7 +27,7 @@ function Konva({ items, setItems }) {
             <ImageHandler
               key={i}
               src={item.src}
-              shapeProps={item}
+              imageProps={item}
               isSelected={item.id === selectedId}
               onSelect={() => {
                 setSelectedId(item.id);
@@ -36,6 +36,11 @@ function Konva({ items, setItems }) {
                 const img = items.slice();
                 img[i] = newAttrs;
                 setItems(img);
+              }}
+              onDelete={() => {
+                const newImages = [...items];
+                newImages.splice(i, 1);
+                setItems(newImages);
               }}
             />
           ))}
