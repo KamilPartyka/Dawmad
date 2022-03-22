@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Stage, Layer } from 'react-konva';
 import PropTypes from 'prop-types';
-import ImageHandler from 'components/Konva/ImageHandler/ImageHandler';
+import LayerItem from 'components/Konva/LayerItem';
 
 function Konva({ items, setItems }) {
   const [selectedId, setSelectedId] = useState(null);
@@ -14,6 +14,18 @@ function Konva({ items, setItems }) {
     }
   };
 
+  const handleOnDelete = (i) => {
+    const newImages = [...items];
+    newImages.splice(i, 1);
+    setItems(newImages);
+  };
+
+  const handleOnChange = (newAttrs, i) => {
+    const img = items.slice();
+    img[i] = newAttrs;
+    setItems(img);
+  };
+
   return (
     <Stage
       width={window.innerWidth}
@@ -24,24 +36,14 @@ function Konva({ items, setItems }) {
       <Layer>
         {items &&
           items.map((item, i) => (
-            <ImageHandler
-              key={i}
+            <LayerItem
+              key={item.id}
               src={item.src}
               imageProps={item}
               isSelected={item.id === selectedId}
-              onSelect={() => {
-                setSelectedId(item.id);
-              }}
-              onChange={(newAttrs) => {
-                const img = items.slice();
-                img[i] = newAttrs;
-                setItems(img);
-              }}
-              onDelete={() => {
-                const newImages = [...items];
-                newImages.splice(i, 1);
-                setItems(newImages);
-              }}
+              onChange={(newAttrs) => handleOnChange(newAttrs, i)}
+              onDelete={() => handleOnDelete(i)}
+              onSelect={() => setSelectedId(item.id)}
             />
           ))}
       </Layer>
@@ -65,6 +67,5 @@ Konva.propTypes = {
     PropTypes.shape({ current: PropTypes.instanceOf(window.Element) }),
   ]).isRequired,
 };
-Konva.defaultProps = {};
 
 export default Konva;

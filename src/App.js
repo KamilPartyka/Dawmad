@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import MainTemplate from 'templates/MainTemplate';
 
-import Konva from 'components/Konva/Konva';
-import Navbar from 'components/Navbar/Navbar';
+import Konva from 'components/Konva';
+import Navbar from 'components/Navbar';
 
 function App() {
   const [items, setItems] = useState([]);

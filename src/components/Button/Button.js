@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { StyedButton } from './styles';
+import { StyledButton } from './styles';
 
 function Button({ children, color, ...props }) {
   return (
-    <StyedButton {...props} color={color}>
+    <StyledButton {...props} color={color}>
       {children}
-    </StyedButton>
+    </StyledButton>
   );
 }
 
@@ -13,6 +13,5 @@ Button.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   color: PropTypes.string.isRequired,
 };
-Button.defaultProps = {};
 
 export default Button;

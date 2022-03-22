@@ -27,6 +27,5 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   color: PropTypes.string.isRequired,
 };
-Input.defaultProps = {};
 
 export default Input;

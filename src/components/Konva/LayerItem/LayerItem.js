@@ -119,6 +119,5 @@ ImageHandler.propTypes = {
   onChange: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
-ImageHandler.defaultProps = {};
 
 export default ImageHandler;
