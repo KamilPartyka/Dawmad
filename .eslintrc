@@ -19,6 +19,9 @@
       }
     }
   },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "rules": {
     "no-unused-vars": 1,
     "react/prop-types": 1,
@@ -29,6 +32,7 @@
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
     // allow jsx syntax in js files
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-restricted-exports": "off"
   }
 }

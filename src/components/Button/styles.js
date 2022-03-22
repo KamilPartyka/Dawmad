@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyedButton = styled.button`
+export const StyledButton = styled.button`
   background: ${({ theme, color }) => theme[color]};
   border-radius: 5rem;
   padding: 7px 3rem;
